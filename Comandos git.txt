@@ -1,0 +1,15 @@
+git clone https://www.github.com/125611/PAW.git //crea carpeta local en la ruta donde estes parado con el git (hacerlo solo la primera vez)
+
+Luego dentro de la carpeta creada (parado desde la consola de git) 
+
+git pull //actualiza la carpeta (usar cada vez que abrimos el git )
+
+git status //(comando opcional) muestra que falta subir, para luego hacer un git add --all y commit
+
+git commit -m "mensaje" //comenta el paquete para luego subirlo con add
+
+git add --all //prepara la carepta con los cambios
+
+git push //sube la carpeta actualizada al github con el comentario como "titulo"
+
+(en caso de que git push no funcione, probar con el comando: git push origin master)
