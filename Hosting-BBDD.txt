@@ -1,0 +1,13 @@
+miviajante.esy.es
+
+HOSTING: www.hostinger.com.ar
+User paw
+mail gabrielcancro@gmail.com
+pass paw2017
+
+Base de Datos
+host mysql.hostinger.com.ar
+name u694865665_paw
+user u694865665_paw
+pass paw2017
+
