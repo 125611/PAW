@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>http://www.miviajante.com/index.html</loc>
+	</url>
+	<url>
+		<loc>http://www.miviajante.com/login.html</loc>
+	</url>
+	<url>
+		<loc>http://www.miviajante.com/rubros.html</loc>
+	</url>
+	<url>
+		<loc>http://www.miviajante.com/pedidos.html</loc>
+	</url>
+	<url>
+		<loc>http://www.miviajante.com/editar-pedido.html</loc>
+	</url>
+	<url>
+		<loc>http://www.miviajante.com/mirubro/productos.html</loc>
+	</url>
+</urlset>
