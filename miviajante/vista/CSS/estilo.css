@@ -1,0 +1,53 @@
+:root {
+    --color-muyFuerte: #0C5A10;
+    --color-fuerte: #2E7D32;
+    --color-medio: #43A047;
+    --color-suave: #9CCC65;
+    --color-destacado:#BFFE87;
+}
+
+*{font-family:sans-serif;}
+
+header{    
+    color: var(--color-muyFuerte);
+    background-color: aqua;
+}
+
+.bodySection{    
+    padding: 50px;
+    background-color: darkgray;
+}
+
+footer{    
+    color: var(--color-suave);
+    background-color: brown;
+}
+
+.tablaEstilo1{
+    width: 80%;
+    user-select: none;
+    text-align: center;
+    font-size: 100%;
+    cursor: pointer;
+    background-color: var(--color-suave);
+    padding: 5px;
+    margin: auto 5px;
+    border-radius: 20px;
+}
+
+.tablaEstilo1 th{
+    background-color: var(--color-fuerte);
+    width: auto;
+    height: 25px;
+}
+
+.tablaEstilo1 tr{
+	width: auto;
+    height: 30px;
+    background-color: var(--color-medio);
+}
+
+ .tablaEstilo1 tr:hover{
+     transition-duration: 0.2s;
+     background-color: var(--color-destacado);
+}
