@@ -11,3 +11,8 @@ name u694865665_paw
 user u694865665_paw
 pass paw2017
 
+FTP
+sitio: ftp.miviajante.esy.es
+port: 21
+usu: u694865665
+pass:  paw2017 ??

@@ -1,3 +1,25 @@
+window.onload = function () {
+    var TGresize=document.createElement('p')
+    TGresize.innerHTML='resizeTag';
+    window.onresize=function(){
+       TGresize.innerHTML=window.outerWidth+'x'+window.outerHeight ;
+    }
+    document.getElementsByTagName('header')[0].prepend(TGresize);
+}
+
+/*
+window.onload = function () {
+    //obtenemos el id de la pagina cargada
+    var IDpag = document.getElementsByClassName('bodySection')[0].getAttribute('id');
+    
+   //asignamos el .js que le corresponda
+  //document.getElementById('jsScript').setAttribute('src','{$path_base}vista/JS/'+IDpag+'.js');
+    var jsScript=document.createElement('script');
+    jsScript.setAttribute('type','text/javascript');
+    jsScript.setAttribute('src','vista/JS/'+IDpag+'.js');
+    document.getElementsByTagName('head')[0].appendChild(jsScript);
+}
+
 /*var TGbody;
 var TGtabla;
 var TGtr;
