@@ -1,0 +1,74 @@
+:root {
+    --color-muyFuerte: #0C5A10;
+    --color-fuerte: #2E7D32;
+    --color-medio: #43A047;
+    --color-suave: #9CCC65;
+    --color-destacado:#BFFE87;
+    --color-fondoApp:darkgray;
+    --color-cabecera:aqua;
+    --color-fondoSector:beige;//burlywood
+}
+
+*{font-family:sans-serif;}
+*{margin:0px; padding: 0px;}
+
+header{    
+    color: var(--color-muyFuerte);
+    background-color: var(--color-cabecera);
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    max-height: 90px;
+    overflow: hidden;
+}
+
+.bodySection{    
+    padding: 100px 5px 5px 5px;
+    background-color: var(--color-fondoApp);
+}
+
+.sectorMenu li{
+    display: block;
+    background-color: var(--color-fondoSector);
+    padding: 15px;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+footer{    
+    color: var(--color-suave);
+    background-color: brown;
+}
+
+
+
+.tablaEstilo1{
+    width: 80%;
+    user-select: none;
+    text-align: center;
+    font-size: 100%;
+    cursor: pointer;
+    background-color: var(--color-suave);
+    padding: 5px;
+    margin: auto 5px;
+    border-radius: 20px;
+}
+
+.tablaEstilo1 th{
+    background-color: var(--color-fuerte);
+    width: auto;
+    height: 25px;
+}
+
+.tablaEstilo1 tr{
+	width: auto;
+    height: 30px;
+    background-color: var(--color-medio);
+}
+
+ .tablaEstilo1 tr:hover{
+     transition-duration: 0.2s;
+     background-color: var(--color-destacado);
+}

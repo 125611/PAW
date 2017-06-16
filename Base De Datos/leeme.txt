@@ -1,2 +1,0 @@
-Las claves foraneas estan en NO ACTION para el on update y el on delete..
-despues decidimos para ver si cambiamos algunas
