@@ -6,9 +6,12 @@ git pull //actualiza la carpeta (usar cada vez que abrimos el git )
 
 git status //(comando opcional) muestra que falta subir, para luego hacer un git add --all y commit
 
-git commit -m "mensaje" //comenta el paquete para luego subirlo con add
 
 git add --all //prepara la carepta con los cambios
+
+git commit -m "mensaje" //comenta el paquete para luego subirlo con add
+
+
 
 git push //sube la carpeta actualizada al github con el comentario como "titulo"
 
