@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" media="all" href="style/style.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet"/>
-        <title>.:MiViajante:.</title>
-    </head>
-    <body>
-        <header>
-            <img src="imagenes/logo.png" alt="Logo de la empresa">
-            <h2>Bienvenidos al Sitio Oficial de <br><span>"Mi Viajante"</span></h2>
-        </header>
-        <nav>
-            
-        </nav>
-        <article>
-            <form class="formulario" action="php/index.php/Login/InicioSesion" method="post">
+
+         
+
+<article>
+            <form class="formulario" action="controlador/despachador.php/Login/iniciarSesion" method="post">
                 <ul>
                     <li>
                         <label for="usuario">Ingrese su Email: (*)</label>
@@ -33,13 +20,8 @@
                     <li>
                         <input class="boton" type="submit" value="INICIAR SESION">
                         <p id="aclaracion">(*) Campo requerido.<p>
-                        <h5>Sos nuevo? -> <a href="html/registro.html">REGISTRARME</a></h5>
+                        <h5>Sos nuevo? -> <a href="controlador/despachador.php/Registro/mostrar">REGISTRARME</a></h5>
                     </li>
                 </ul>
             </form>
-        </article>
-        <footer>
-            
-        </footer>
-    </body>
-</html>
+</article>

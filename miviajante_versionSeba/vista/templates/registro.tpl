@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" media="all" href="../style/style.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet"/>
-        <title>.:MiViajante:.</title>
-    </head>
-    <body>
-        <header>
-            <img src="../imagenes/logo.png" alt="Logo de la empresa">
-            <h2>Bienvenidos al Sitio Oficial de <br><span>"Mi Viajante"</span></h2>
-        </header>
-        <nav>
-            
-        </nav>
-        <article>
-            <form class="formulario" action="php/index.php/Login/Registro" method="post">
+<article>
+            <form class="formulario" action="controlador/despachador.php/Registro/registrar" method="post">
                 <ul>
                     <li>
                         <label for="nombre">Ingrese su Nombre: (*)</label>
@@ -57,8 +41,3 @@
                 </ul>
             </form>
         </article>
-        <footer>
-            
-        </footer>
-    </body>
-</html>
