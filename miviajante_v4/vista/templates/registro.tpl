@@ -1,4 +1,7 @@
-<article>
+{extends file='p_layout.tpl'}
+{block name=body}
+           <article>
+           <h2>{$mensaje}</h2>
             <form class="formulario" action="{$path_base}index.php/Registro/registrar" method="post">
                 <ul>
                     <li>
@@ -11,16 +14,11 @@
                     </li>
                     <li>
                         <label for="usuario">Ingrese su Email: (*)</label>
-                        <input class="in" type="email" name="usuario" placeholder="Email" required>
+                        <input class="in" type="email" name="email" placeholder="Email" required>
                     </li>
                     <li>
                         <label for="password">Ingrese su Contraseña: (*)</label>
-                        <input 
-                            class="in" 
-                            type="password" 
-                            name="password" 
-                            placeholder="Contraseña" 
-                            required>
+                        <input class="in" type="password" name="pass" placeholder="Contraseña" required>
                     </li>
                     <li>
                         <label for="direccion">Ingrese su Direccion: (*)</label>
@@ -41,3 +39,4 @@
                 </ul>
             </form>
         </article>
+        {/block}

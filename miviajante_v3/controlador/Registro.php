@@ -9,13 +9,10 @@ class Registro extends Controlador{
 
     }
     
+    public function defaultAction(){$this->mostrar();}
+    
     public function mostrar(){
-
-        $vista = new VistaHtml();
-        $variablesDeVista = array();
-        $variablesDeVista['mostrar']='registro';
-        $vista->setVariables($variablesDeVista);
-        $vista->renderizar(); 
+        $this->setVariableVista('mostrar', 'registro'); 
 
     }
 }

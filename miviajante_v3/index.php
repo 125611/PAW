@@ -1,8 +1,6 @@
 <?php
-    include('vista/VistaHtml.php');
-    $vista = new VistaHtml();
-    $variablesDeVista = array();
-    $variablesDeVista['mostrar']='login';
-    $vista->setVariables($variablesDeVista);
-    $vista->renderizar(); 
+    require_once("controlador/Director.php");
+    $D=new Director();
+    $D->action($_REQUEST,$_SERVER["PHP_INFO"]); 
+    
 ?>

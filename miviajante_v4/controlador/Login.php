@@ -8,9 +8,16 @@ class Login extends Controlador{
         session_start();
     }
    
-    public function defaultAction(){$this->iniciarSesion('','');}
+    public function defaultAction(){$this->mostrar($REQ);}
     
-    public function iniciarSesion($usuario, $clave){
+        
+    public function mostrar($REQ){
+        $this->setVariableVista('mostrar','login');
+    }
+    
+    
+    public function iniciarSesion($REQ){
+        
         //echo '...intento de logueo usu:'.$usuario.' pas:'.$clave.'</br>';
         if($_SESSION['logueado']==1){
             $this->setVariableVista('mostrar','menu');
@@ -22,12 +29,12 @@ class Login extends Controlador{
                 $_SESSION['mailEmpresa']='bulofriends@gmail.com';
                 $this->setVariableVista('mostrar','menu');
             }else{
-                $this->setVariableVista('mostrar','login');
+                
                 if ($usuario!='') $this->setVariableVista('mensaje','usuario o pasword incorrecto, vuelva a intentar..');
             }
         }
     }
-    
+
     public function cerrarSesion(){
         unset($_SESSION["nombreEmpresa"]); 
         unset($_SESSION["telefonoEmpresa"]);

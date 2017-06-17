@@ -22,7 +22,9 @@ class Director{
         
         if($miClase=='Registro'){
             $C=new Registro();
-            $C->mostrar();
+            $C->invocar($miMetodo,array());
         }
+        
+        
     }
 }
