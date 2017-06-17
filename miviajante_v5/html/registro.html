@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" media="all" href="../style/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet"/>
+        <title>.:MiViajante:.</title>
+    </head>
+    <body>
+        <header>
+            <img src="../imagenes/logo.png" alt="Logo de la empresa">
+            <h2>Bienvenidos al Sitio Oficial de <br><span>"Mi Viajante"</span></h2>
+        </header>
+        <nav>
+            
+        </nav>
+        <article>
+            <form class="formulario" action="php/index.php/Login/Registro" method="post">
+                <ul>
+                    <li>
+                        <label for="nombre">Ingrese su Nombre: (*)</label>
+                        <input class="in" type="text" name="nombre" placeholder="Nombre" required>
+                    </li>
+                    <li>
+                        <label for="apellido">Ingrese su Apellido: (*)</label>
+                        <input class="in" type="text" name="apellido" placeholder="Apellido" required>
+                    </li>
+                    <li>
+                        <label for="usuario">Ingrese su Email: (*)</label>
+                        <input class="in" type="email" name="usuario" placeholder="Email" required>
+                    </li>
+                    <li>
+                        <label for="password">Ingrese su Contraseña: (*)</label>
+                        <input 
+                            class="in" 
+                            type="password" 
+                            name="password" 
+                            placeholder="Contraseña" 
+                            required>
+                    </li>
+                    <li>
+                        <label for="direccion">Ingrese su Direccion: (*)</label>
+                        <input class="in" type="text" name="direccion" placeholder="Direccion" required>
+                    </li>
+                    <li>
+                        <label for="telefono">Ingrese su Telefono: (*)</label>
+                        <input class="in" type="text" name="telefono" placeholder="Telefono" required>
+                    </li>
+                    <li>
+                        <input class="boton" type="submit" value="REGISTRARME">
+                        <p id="aclaracion">(*) Campo requerido.<p>
+                        <h5><a href="../index.html" >CANCELAR</a></h5>
+                    </li>
+                    <li>
+                        
+                    </li>
+                </ul>
+            </form>
+        </article>
+        <footer>
+            
+        </footer>
+    </body>
+</html>
