@@ -6,4 +6,5 @@
     <script type="text/javascript" src="{$path_base}vista/JS/{$mostrar}.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="{$path_base}vista/CSS/estilo.css">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>

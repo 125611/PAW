@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-06-15 11:18:47
+/* Smarty version 3.1.30, created on 2017-06-16 10:49:07
   from "C:\AppServ\www\PAW\miviajante\vista\templates\p_head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59429747cc6f49_01245200',
+  'unifunc' => 'content_5943e1d31b60c7_26541693',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12b8bab3b7c6b83d08b0da3667e9ec14cea34c1c' => 
     array (
       0 => 'C:\\AppServ\\www\\PAW\\miviajante\\vista\\templates\\p_head.tpl',
-      1 => 1497536320,
+      1 => 1497620847,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59429747cc6f49_01245200 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5943e1d31b60c7_26541693 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
     <meta charset="utf-8">
@@ -40,5 +40,6 @@ vista/JS/<?php echo $_smarty_tpl->tpl_vars['mostrar']->value;?>
 >
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
 vista/CSS/estilo.css">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head><?php }
 }

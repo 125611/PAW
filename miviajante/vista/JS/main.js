@@ -1,6 +1,6 @@
 window.onload = function () {
     var TGresize=document.createElement('p')
-    TGresize.innerHTML='resizeTag';
+    TGresize.innerHTML=window.outerWidth+'x'+window.outerHeight;
     window.onresize=function(){
        TGresize.innerHTML=window.outerWidth+'x'+window.outerHeight ;
     }

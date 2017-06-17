@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-06-15 08:42:44
+/* Smarty version 3.1.30, created on 2017-06-16 11:11:15
   from "C:\AppServ\www\PAW\miviajante\vista\templates\menu.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_594272b4e9b483_61997914',
+  'unifunc' => 'content_5943e7036c2d40_47722942',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '49d273cbd8913f6161e3c6d79fe0e2cc063699e4' => 
     array (
       0 => 'C:\\AppServ\\www\\PAW\\miviajante\\vista\\templates\\menu.tpl',
-      1 => 1497526955,
+      1 => 1497622089,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:p_layout.tpl' => 1,
   ),
 ),false)) {
-function content_594272b4e9b483_61997914 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5943e7036c2d40_47722942 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19470594272b4e83d83_62716021', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_126985943e7036ab636_00627844', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:p_layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_19470594272b4e83d83_62716021 extends Smarty_Internal_Block
+class Block_126985943e7036ab636_00627844 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -44,13 +44,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <h2 onclick="<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
 index.php/Pedidos">Pedidos</h2>
             <img src="<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
-/vista/img/icon_pedidos.jpg" alt="icono de pedidos">
+/vista/SRC/icon_pedidos.png" alt="icono de pedidos">
             <p>En Esta seccion podremos administrar nuestros pedidos, crear nuevos pedidos, modificar o visualizar los ya existentes.</p> 
         </li>
         <li>
             <h2>Productos</h2>
             <img src="<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
-/vista/img/icon_productos.jpg" alt="icono de productos">
+/vista/SRC/icon_productos.png" alt="icono de productos">
             <p>En Esta seccion podras visualizar todos los productos ofrecidos por el proveedor, asi como la cantidad que dispone en stock y dejar algun comentario de utilidad.</p>
             <a href='<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
 index.php/Productos'>ir</a>        
@@ -58,7 +58,7 @@ index.php/Productos'>ir</a>
         <li>
             <h2>Otros</h2>
             <img src="<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
-/vista/img/icon_pedidos.jpg" alt="icono de otro">
+/vista/SRC/icon_pedidos.png" alt="icono de otro">
             <p>En Esta seccion podras visualizar otras cosas (?)</p>
             <a href='<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
 index.php/Pedidos'>ir</a>        
