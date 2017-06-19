@@ -1,8 +1,50 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
+/*HEADER CSS*/
+header{
+    overflow: hidden;
+    padding: 1em 0;
+    border-bottom: 10px solid #2846B4;
+    text-align: center;
+}
+
+header img{
+    width: 35%;
+    display: inline-block;
+    max-width: 250px;
+    min-width: 80px;
+}
+
+header h2{
+    color: #2846B4;
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+    min-width: 280;
+    padding-top: 1em;
+}
+
+header span{
+    font-weight: bold;
+    font-size: 30px;
+}
+header infoCliente{
+    width: 10%;
+}
+
+header article{
+    display: inline-block;
+    margin: 10px auto;
+ 
+    overflow: hidden;
+}
+
+
+/*BODY CSS*/
 body{
     width: 100%;
     font-family: Asap, sans-serif;
@@ -10,42 +52,17 @@ body{
     position: absolute;
 }
 
-header{
-    overflow: hidden;
-    padding: 1em 0;
-    border-bottom: 10px solid #2846B4;
+.sectorMenu{
+    margin: auto;
+    width: 70%
 }
-
-header img{
-    width: 25%;
-    float: left;
-    display: inline;
-    max-width: 250px;
-    min-width: 80px;
-}
-
-h2{
-    color: #2846B4;
-    float: left;
-    width: 75%;
-    text-align: center;
-    min-width: 280;
-    padding-top: 1em;
-}
-
-span{
-    font-weight: bold;
-    font-size: 30px;
-}
-
-ul{
-    list-style: none;
-}
-
-article{
-    width: 100%;
-    overflow: hidden;
-    background-color: #BEBEBE;
+.sectorMenu li{
+    display: inline block; 
+    width: 45%;
+    background-color: aqua;
+    margin: 10px auto;
+    padding: 20px;
+    
 }
 
 .formulario{
