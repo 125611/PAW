@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 15-06-2017 a las 17:53:50
+-- Tiempo de generación: 19-06-2017 a las 18:27:28
 -- Versión del servidor: 5.5.55-0ubuntu0.14.04.1
 -- Versión de PHP: 5.5.9-1ubuntu4.21
 
@@ -30,30 +30,35 @@ CREATE TABLE IF NOT EXISTS `Cliente` (
   `ID` int(5) NOT NULL AUTO_INCREMENT,
   `nombre_cliente` varchar(25) NOT NULL,
   `apellido_cliente` varchar(25) NOT NULL,
+  `password` varchar(8) NOT NULL,
   `correo_electronico` varchar(50) NOT NULL,
   `direccion` varchar(50) NOT NULL,
   `telefono` int(40) NOT NULL,
   `estado_cliente` tinyint(1) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
 
 --
 -- Volcado de datos para la tabla `Cliente`
 --
 
-INSERT INTO `Cliente` (`ID`, `nombre_cliente`, `apellido_cliente`, `correo_electronico`, `direccion`, `telefono`, `estado_cliente`) VALUES
-(16, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(22, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(24, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(25, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(26, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(28, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(29, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(30, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(32, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(33, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(34, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1),
-(36, 'holsa', 'holsa', 'holsa', 'holsa', 1, 1);
+INSERT INTO `Cliente` (`ID`, `nombre_cliente`, `apellido_cliente`, `password`, `correo_electronico`, `direccion`, `telefono`, `estado_cliente`) VALUES
+(30, 'holsa', 'holsa', '', 'holsa', 'holsa', 1, 1),
+(38, 'asd', 'asd', '1234', 'santiago@123', 'qwe', 123, 0),
+(39, 'hola', 'chau', 'qwe', 'jej@jej', 'dir', 444, 0),
+(40, 'hola', 'chau', 'qwe', 'jej@jej', 'dir', 444, 0),
+(41, 'asd', 'qwe', 'asd', '123@qwe', 'ddd', 222, 0),
+(42, 'abcde', 'abc', 'test', 'test@test', 'dr', 444, 0),
+(43, 'asd', 'qwe', 'asd', '123@qwe', 'ddd', 222, 0),
+(44, 'asd', 'qwe', 'asd', '123@qwe', 'ddd', 222, 0),
+(45, 'asd', 'qwe', 'asd', '123@qwe', 'ddd', 222, 0),
+(46, 'hola', 'chau', 'chau', 'chau@chau', 'qwe', 233, 0),
+(47, 'hola', 'chau', 'chau', 'chau@chau', 'qwe', 233, 0),
+(48, 'hola', 'chau', 'chau', 'chau@chau', 'qwe', 233, 0),
+(49, 'santiago', 'asd', 'test', 'hola@test', 'puey', 123, 0),
+(50, 'asd', 'asd', '123', 'asd@asd', 'puey', 97, 0),
+(51, 'hola', 'hola', 'hola', 'hola@hola', 'hola', 123, 0),
+(52, 'seba', 'cardoso', 'seba', 'seba@seba', 'seba', 123, 0);
 
 -- --------------------------------------------------------
 
