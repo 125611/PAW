@@ -3,6 +3,9 @@
 <article>
             <form class="formulario" action="{$path_base}index.php/Login/iniciarSesion" method="post">
                 <ul>
+                    <p class="mensaje">{$mensaje}</p>
+                    
+                    
                     <li>
                         <label for="usuario">Ingrese su Email: (*)</label>
                         <input class="in" type="email" name="usuario" placeholder="Email" required>

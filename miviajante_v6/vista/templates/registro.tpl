@@ -1,7 +1,9 @@
 {extends file='p_layout.tpl'}
 {block name=body}
            <article>
-           <h2>{$mensaje}</h2>
+            {if isset($mensaje)}
+            <h2>{$mensaje}</h2>
+            {/if}
             <form class="formulario" action="{$path_base}index.php/Registro/registrar" method="post">
                 <ul>
                     <li>

@@ -3,7 +3,7 @@ return array(
     "driver"    =>"mysql",
     "host"      =>"localhost",
     "user"      =>"root",
-    "pass"      =>"admin",
-    "database"  =>"MiViajante",
+    "pass"      =>"root1234",
+    "database"  =>"miviajante",
     "charset"   =>"utf8"
 );

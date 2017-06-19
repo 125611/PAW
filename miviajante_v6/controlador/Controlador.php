@@ -30,7 +30,8 @@ abstract class Controlador{
         $this->variablesDeVista['mostrar']='login';
     }
     
-    protected function setVariableVista($clave,$valor){
+    public function setVariableVista($clave,$valor){
+        //echo $clave.'>'.$valor.'</br>';
         $this->variablesDeVista[$clave]=$valor;
     }
 }

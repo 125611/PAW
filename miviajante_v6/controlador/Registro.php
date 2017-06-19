@@ -13,7 +13,6 @@ class Registro extends Controlador{
     public function defaultAction(){$this->mostrar($REQ);}
     
     public function mostrar($REQ){
-        $this->setVariableVista('mensaje', ''); 
         $this->setVariableVista('mostrar', 'registro'); 
     }
     
