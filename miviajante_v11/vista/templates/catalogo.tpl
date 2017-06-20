@@ -1,5 +1,5 @@
 
-{extends file='p_layout_home.tpl'}
+{extends file='p_layout.tpl'}
 {block name=body}    
           
 <aside>

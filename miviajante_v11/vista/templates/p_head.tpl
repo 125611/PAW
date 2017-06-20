@@ -5,5 +5,5 @@
     <link rel="stylesheet" href="{$path_base}vista/CSS/estilo.css">
     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet"/>
     <title>.:MiViajante:.</title>
-    <script languaje="JavaScript">var $baseUrl='{$path_base}';</script>;
+    <script languaje="JavaScript">var $baseUrl='{$path_base}';</script>
 </head>
