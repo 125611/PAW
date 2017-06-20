@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 19-06-2017 a las 18:27:28
+-- Tiempo de generación: 19-06-2017 a las 20:11:21
 -- Versión del servidor: 5.5.55-0ubuntu0.14.04.1
 -- Versión de PHP: 5.5.9-1ubuntu4.21
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `Cliente` (
   `telefono` int(40) NOT NULL,
   `estado_cliente` tinyint(1) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
 
 --
 -- Volcado de datos para la tabla `Cliente`
@@ -58,7 +58,10 @@ INSERT INTO `Cliente` (`ID`, `nombre_cliente`, `apellido_cliente`, `password`, `
 (49, 'santiago', 'asd', 'test', 'hola@test', 'puey', 123, 0),
 (50, 'asd', 'asd', '123', 'asd@asd', 'puey', 97, 0),
 (51, 'hola', 'hola', 'hola', 'hola@hola', 'hola', 123, 0),
-(52, 'seba', 'cardoso', 'seba', 'seba@seba', 'seba', 123, 0);
+(52, 'seba', 'cardoso', 'seba', 'seba@seba', 'seba', 123, 0),
+(53, 'jj', 'jj', 'j', 'j@j', 'j', 1, 0),
+(54, 'qwe', 'qwe', 'q', 'q@q', 'qwe', 123, 0),
+(55, 'y', 'y', 'y', 'y@y', 'y', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -107,14 +110,23 @@ INSERT INTO `Pedido` (`nro`, `id_cliente`, `fecha_de_inicio`, `fecha_de_entrega`
 --
 
 CREATE TABLE IF NOT EXISTS `Producto` (
-  `codigo_producto` int(15) NOT NULL,
+  `codigo_producto` int(15) NOT NULL AUTO_INCREMENT,
   `codigo_rubro` int(25) NOT NULL,
   `descripcion` varchar(255) NOT NULL,
   `precio_unitario` int(10) NOT NULL,
   `stock` int(10) NOT NULL,
   PRIMARY KEY (`codigo_producto`),
   KEY `codigo_rubro` (`codigo_rubro`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Volcado de datos para la tabla `Producto`
+--
+
+INSERT INTO `Producto` (`codigo_producto`, `codigo_rubro`, `descripcion`, `precio_unitario`, `stock`) VALUES
+(1, 1, 'Router tp link', 300, 7),
+(2, 1, 'switch linksys', 450, 3),
+(3, 2, 'Teclado y mouse inalambrico', 600, 10);
 
 -- --------------------------------------------------------
 
@@ -127,6 +139,14 @@ CREATE TABLE IF NOT EXISTS `Rubro` (
   `nombre_rubro` varchar(50) NOT NULL,
   PRIMARY KEY (`codigo_rubro`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `Rubro`
+--
+
+INSERT INTO `Rubro` (`codigo_rubro`, `nombre_rubro`) VALUES
+(1, 'Conectividad'),
+(2, 'Perifericos');
 
 --
 -- Restricciones para tablas volcadas
