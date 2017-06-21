@@ -15,8 +15,6 @@ function iniciar(){
     cont = 0; 
     clearInterval(miIntervalo);
 	miIntervalo = setInterval(function(){siguiente()}, 4000);
-    
-    agregarBotonesPedidos();
 }
 
 function anterior(){
@@ -39,13 +37,5 @@ function siguiente(){
     miIntervalo = setInterval(function(){siguiente()}, 4000);
 }
 
-function agregarBotonesPedidos(){
-    var boton1 = document.createElement('button');
-    boton1.innerHTML = '+';
-    $('.item_listaProductos').append(boton1);
-    var boton2 = document.createElement('button');
-    boton2.innerHTML = '-';
-    $('.item_listaProductos').append(boton2);
-}
 
 

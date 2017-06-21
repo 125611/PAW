@@ -33,5 +33,16 @@ class Pedidos extends Controlador{
         }
        // $this->setVariableVista('listaPedidos', $rta); 
     }
+    
+    public function setDetalleNuevoPedido($REQ){
+        setcookie('IDP'.$REQ['idProducto'], $REQ['cantidad'], time() + (86400 * 30), "/");
+        echo 'IDP'.$REQ['idProducto'].$REQ['cantidad'];
+        $this->setVariableVista('mostrar', 'vacio');
+    }
+    
+    public function getDetalleNuevoPedido($REQ){
+        echo $_COOKIE['IDP'.$REQ['idProducto']];
+        $this->setVariableVista('mostrar', 'vacio');
+    }
 }
 ?>

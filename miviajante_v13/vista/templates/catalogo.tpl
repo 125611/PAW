@@ -25,8 +25,7 @@
     <ul>
         
   {foreach item=item from=$listaProductos}
-        <li class='item_listaProductos'>
-            <p class='id_producto'>{$item->getCodigo_producto()}</p>
+        <li class='item_listaProductos' data-idProducto='{$item->getCodigo_producto()}'>
             <h1>{$item->getTitulo()}</h1>
             <img src='{$item->getRutaImagen()}'>
             <p>{$item->getDescripcion()}</p>
