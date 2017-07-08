@@ -5,17 +5,18 @@ window.onload=function(){
 
 function colocarBotonesProductos(){
     
-    var items=document.getElementsByClassName('precio');
+    var items=document.getElementsByClassName('item_listado');
     var B, i, IDP, cantInicial;
     for(i=0;i<items.length;i++){
         //BOTON MENOS
         B=document.createElement('button');
         IDP=items[i].getAttribute('data-idProducto');
+        console.log(IDP);
         B.setAttribute('data-idProducto',IDP);
         B.innerHTML='-';
         B.onclick=menosOnclick;
         items[i].appendChild(B);
-        /*
+        
         //CONTADOR
         B=document.createElement('button');
         IDP=items[i].getAttribute('data-idProducto');
@@ -26,7 +27,7 @@ function colocarBotonesProductos(){
         
         //ASYNC
         getConAjax_POST_HTML($baseUrl+'index.php/Pedidos/getDetalleNuevoPedido?idProducto='+IDP,B,0);       
-        */
+        
         //BOTON MAS
         B=document.createElement('button');
         IDP=items[i].getAttribute('data-idProducto');

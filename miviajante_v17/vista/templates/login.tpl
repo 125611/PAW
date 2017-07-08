@@ -22,7 +22,7 @@
                     <li>
                         <input class="boton" type="submit" value="Iniciar Sesion">
                         <p id="aclaracion">(*) Campo requerido.<p>
-                        <h5><a href="{$path_base}index.php/LoginGoogle/iniciarSesion" class="enlaceChico">Iniciar con cuenta de Google</a></h5>h5>
+                        <h5><a href="{$path_base}index.php/LoginGoogle/iniciarSesion" class="enlaceChico">Iniciar con cuenta de Google</a></h5>
                         <h5>Sos nuevo? -> <a href="{$path_base}index.php/Registro/mostrar" class="enlaceChico">REGISTRATE</a></h5>
                     </li>
                 </ul>

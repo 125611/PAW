@@ -14,7 +14,7 @@ class Productos extends Controlador{
     public function defaultAction(){$this->mostrar($REQ);}
     
     public function mostrar($REQ){
-        $this->setVariableVista('mostrar', 'productos'); 
+        $this->setVariableVista('mostrar', 'catalogo'); 
     }
         
     public function verCatalogo($REQ){

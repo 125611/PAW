@@ -71,20 +71,7 @@ class LoginGoogle extends Controlador{
         }
         
         $user = $service->userinfo->get(); //get user info    
-        
-        //ver si ya tenemos registrado al cliente en la BBDD
-            //$result = $mysqli->query("SELECT COUNT(google_id) as usercount FROM google_users WHERE google_id=$user->id");
-	          
-            //SI NO EXISTE HAY QUE CREARLO!!!!
-                   
-            //SINO EXISTE EN LA BD LO AGREGAMOS
-                //$statement = $mysqli->prepare("INSERT INTO google_users (google_id, google_name, google_email, google_link, google_picture_link) VALUES (?,?,?,?,?)");
-		      //$statement->bind_param('issss', $user->id,  $user->name, $user->email, $user->link, $user->picture);
-		      //$statement->execute();
-		      // echo $mysqli->error;
-            
-            //MOSTRAMOS DATOS USUARIO
-            print_r($user);
+        print_r($user);
         
         
         //AHORA CREAMOS LA SESION DEL CLIENTE
@@ -97,26 +84,6 @@ class LoginGoogle extends Controlador{
         $this->setVariableVista('mostrar','home');
   
     }
-    
-    public function cerrarSesion(){
-        unset($_SESSION["isLogueado"]);
-        unset($_SESSION["nombreCliente"]); 
-        unset($_SESSION["telefonoCliente"]);
-        unset($_SESSION["mailCliente"]);
-        session_destroy();
-        //$this->ponerDatosDeUsuarioEnVista();
-        $this->setVariableVista('mensaje', '');
-        $this->setVariableVista('mostrar','login');
-    }
-    
-    public function isLogueado(){
-        if (empty($_SESSION)){
-        return false;
-        }else{
-        return ($_SESSION['isLogueado'] == 'true');        
-        }
-        
-     }
     
     private function getBaseUrl() {
             $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,5))=='https://'?'https://':'http://';

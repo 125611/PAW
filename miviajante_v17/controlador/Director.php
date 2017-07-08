@@ -24,24 +24,26 @@ class Director{
         
         //INICIA SECTOR PARA VERIFICAR EL LOGUEO DEL USUARIO        
             //detallamos las clases que se pueden acceder sin estar logueado
-            $permitidoSinLoguearse=(($miClase!='Login')or($miClase!='LoginGoogle')or($miClase!='Registro'));
+            $permitidoSinLoguearse=(($miClase=='Login')or($miClase=='LoginGoogle')or($miClase=='Registro'));
             $C=new $miClase();
             $L=new Login();
             //si NO estoy logueado y voy a un lugar no permitido me redirije al login
              if (!$L->isLogueado()){
-                if(!$permitidoSinLoguearse){$miClase='Login';$miMetodo='mostrar';}
-                
+                // echo 'no esta logueado';
+                if(!$permitidoSinLoguearse){
+                    //echo 'se intenta acceder a pagina no autorizada';
+                    $C=new Login();$miMetodo='mostrar';}                
             }else{
+                 //echo 'si esta logueado';
                  if($miMetodo=='registrar'){$miClase='Login';$miMetodo='mostrar';}
                  //$C->setVariableVista('isLogueado',$_SESSION['isLogueado']);
                  $C->ponerDatosDeUsuarioEnVista();
              }
-
         //FIN SECTOR PARA VERIFICAR EL LOGUEO DEL USUARIO        
         
-        //creamos la clase y llamamos al metodo..
-        
+        //creamos la clase y llamamos al metodo..        
        //echo 'invoco'. $miClase.'|'.$miMetodo;
+        if(! method_exists($C,$miMetodo)){$miMetodo='defaultAction';}
         $C->invocar($miMetodo,array($REQ));
     }
 }
