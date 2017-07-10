@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 09-07-2017 a las 18:00:24
+-- Tiempo de generación: 10-07-2017 a las 17:30:50
 -- Versión del servidor: 5.5.55-0ubuntu0.14.04.1
 -- Versión de PHP: 5.5.9-1ubuntu4.21
 
@@ -78,6 +78,13 @@ CREATE TABLE IF NOT EXISTS `google_users` (
   PRIMARY KEY (`google_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `google_users`
+--
+
+INSERT INTO `google_users` (`google_id`, `google_name`, `google_email`, `google_link`, `google_picture_link`) VALUES
+(110914757675209567874, 'Santiago Lavigna', 'santiagolavigna1@gmail.com', '', 'https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/A');
+
 -- --------------------------------------------------------
 
 --
@@ -86,24 +93,25 @@ CREATE TABLE IF NOT EXISTS `google_users` (
 
 CREATE TABLE IF NOT EXISTS `Pedido` (
   `nro` int(15) NOT NULL AUTO_INCREMENT,
-  `id_cliente` int(15) NOT NULL,
+  `id_cliente` varchar(255) NOT NULL,
   `fecha_de_inicio` date NOT NULL,
   `fecha_de_entrega` date NOT NULL,
   `estado_pedido` tinyint(1) NOT NULL,
   `precio_total` int(15) NOT NULL,
   PRIMARY KEY (`nro`),
   KEY `id_cliente` (`id_cliente`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1000 ;
 
 --
 -- Volcado de datos para la tabla `Pedido`
 --
 
 INSERT INTO `Pedido` (`nro`, `id_cliente`, `fecha_de_inicio`, `fecha_de_entrega`, `estado_pedido`, `precio_total`) VALUES
-(1, 64, '0000-00-00', '0000-00-00', 0, 5689),
-(2, 64, '0000-00-00', '0000-00-00', 0, 3210),
-(3, 65, '0000-00-00', '0000-00-00', 0, 1520),
-(4, 65, '0000-00-00', '0000-00-00', 0, 6780);
+(1, '64', '0000-00-00', '0000-00-00', 0, 5689),
+(2, '64', '0000-00-00', '0000-00-00', 0, 3210),
+(3, '65', '0000-00-00', '0000-00-00', 0, 1520),
+(4, '65', '0000-00-00', '0000-00-00', 0, 6780),
+(999, '110914757675209567874', '0000-00-00', '0000-00-00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -169,12 +177,6 @@ INSERT INTO `Rubro` (`codigo_rubro`, `nombre_rubro`) VALUES
 ALTER TABLE `Descripcion`
   ADD CONSTRAINT `PED-DES` FOREIGN KEY (`nro_pedido`) REFERENCES `Pedido` (`nro`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `PROD-DESC` FOREIGN KEY (`codigo_producto`) REFERENCES `Producto` (`codigo_producto`);
-
---
--- Filtros para la tabla `Pedido`
---
-ALTER TABLE `Pedido`
-  ADD CONSTRAINT `CL-PE` FOREIGN KEY (`id_cliente`) REFERENCES `Cliente` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
