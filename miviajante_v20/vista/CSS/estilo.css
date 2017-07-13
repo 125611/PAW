@@ -1,0 +1,547 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*BODY*/
+body{
+    width: 90%;
+    margin: 0 auto;
+    font-family: Asap, sans-serif;
+    min-width: 300px;
+}
+
+.cuerpo{
+    min-height: 300px;
+    text-align: center;
+}
+
+/*HEADER*/
+header{
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .cabecera{
+    border-bottom: 2px solid #2846B4;
+    padding: 1em 0;
+    overflow: hidden;
+}
+
+header img{
+    width: 100px;
+    height: 60px;
+    float: left;
+}
+
+h2{
+    color: #2846B4;
+    font-size: 12px;
+    padding-top: 1em;
+    padding-left: 1em;
+    float: left;
+}
+
+span{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+header .infoCliente{
+    float: right;
+    width: 25%;
+    display: inline-block;
+}
+
+.enlaceChico{
+    color: #2846B4;
+    text-decoration-line: underline;
+    font-size: 12px;
+}
+
+.enlaceChico:hover{
+    color: #3C78C8;
+}
+
+.infoCliente h3{
+    color: #2846B4;
+}
+
+.infoCliente ul{
+    float: left;
+}
+
+.infoCliente li{
+    margin: 0.2em 0;
+}
+
+.infoCliente img{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+header .infoEmpresa{
+    width: 35%;
+}
+
+header .infoMiviajante{
+    width: 35%;
+}
+
+header article{
+    display: inline-block;
+    margin: 0.2em auto;
+    overflow: hidden; 
+}
+
+/*MENU*/
+nav {
+    overflow: hidden; 
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid #2846B4;
+}
+
+nav ul {
+	font-size: 14px;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav li {
+    float:left;
+    margin-right: 2em;
+}
+
+nav a {
+    width: 100%;
+    float: left;
+    padding: 0.8em 0.3em;
+    text-decoration: none;
+    color: #2846B4;
+	font-weight: bold;
+    letter-spacing: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    background: #FFFFFF;
+    border-radius: 10px 10px;
+ }
+ 
+nav ul li a:hover {
+    color: #FFFFFF;
+    background: #2846B4;
+}
+
+nav ul li:first-child a {	
+    border-left: 0;  
+}
+
+nav ul li:last-child a {
+    border-right: 0;    
+}
+
+/*GALERIA*/
+#galeria{
+    margin: 2em auto;
+    width: 65%;
+    position: relative;
+}
+
+#galeria img{
+    width: 100%; 
+}
+
+#galeria button{
+    border: none;
+    padding: 0.3em 0.3em;
+    color: #FFFFFF;
+    background-color: #2846B4;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#galeria button:hover{
+    color: #FFFFFF;
+    background-color: #3C78C8;
+}
+
+.anterior{
+    float: left;
+    position: absolute;
+    top: 47%;
+    left: 0;
+}
+
+.siguiente{
+    float: right;
+    position: absolute;
+    top: 47%;
+    right: 0;
+}
+
+/*CATALOGO y PEDIDOS*/
+aside{
+    clear: left;
+    float: left;
+    overflow: hidden;
+    width: 20%;
+    margin-top: 1em;
+    background-color: #2846B4;
+    border-radius: 10px 10px;
+    display: inline-block;
+}
+
+aside li{
+    border-bottom: 1.5px solid #FFFFFF;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+aside a{
+    color: #FFFFFF;
+}
+
+aside a:hover{
+    text-decoration-line: underline;
+}
+
+.listado{
+    width: 70%;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.item_listado{
+    margin-bottom: 2em;
+    border: 2px solid #2846B4;
+    padding: 0.3em;
+    border-radius: 10px 10px;
+    overflow: hidden;
+    min-height: 150px;
+    text-align: left;
+}
+
+.item_listado .imagen{
+    width: 25%;
+    float: left;
+    display: inline-block;
+    padding-top: 1em;
+    border-right: 1px solid #2846B4;
+    min-height: 150px;
+}
+
+.item_listado .descripcion{
+    width: 60%;
+    float: left;
+    display: inline-block;
+    padding-left: 2em;
+}
+
+.item_listado img{
+    width: 150px;
+}
+
+.item_listado .precio{
+    display: inline-block;
+    float: right;
+    width: 10%;
+    border-left: 1px solid #2846B4;
+    min-height: 150px;
+    padding-top: 1em;
+}
+
+.item_listado h1{
+    font-size: 20px;
+}
+
+.item_listado h3{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.item_listado p{
+    margin-top: 2em;
+}
+
+.item_listado button{
+    margin: 0.3em;
+    width: 2em;
+    color: #FFFFFF;
+    background-color: #2846B4;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.item_listado button:hover{
+    background-color: #3C78C8;
+}
+
+.item_listado .id_producto{
+    display: none;
+}
+
+.item_listado .panel-carrito{
+    display: inline-block;
+    float: right;
+    align-content: center;
+    vertical-align: middle;
+    border: 2px solid #2846B4;
+}
+
+/*LOGIN Y REGISTRO*/
+.mensaje{
+    font-weight: bold;
+    text-align: center;
+}
+
+.formulario{
+    width: 60%;
+    border: 2px solid #2846B4;
+    border-radius: 10px 10px;
+    position: relative;
+    left: 20%;
+    overflow: hidden;
+    margin: 2em 0;
+    background-color: #FFFFFF;
+}
+
+.formulario label{
+    float: left;
+    clear: both;
+    margin: 0.5em 0;
+}
+
+.formulario h5{
+    float: right;
+    clear: both;
+    margin: 1em 0;
+    margin-right: 1em;
+}
+
+#aclaracion{
+    float: left;
+    font-size: 12px;
+    margin-top: 2em;
+    margin-left: 1em;
+}
+
+.in{
+    float: left;
+    clear: both;
+    padding: 0.4em;
+    width: 80%;
+    border: 2px solid #2846B4;
+    border-radius: 10px 10px;
+}
+
+.in:hover{
+    border: 2px solid #3C78C8;
+}
+
+.in:focus{
+    border: 2px solid #3C78C8;
+    outline: none;
+}
+
+.boton{
+    clear: left;
+    float: left;
+    margin: 1em 0;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 10px 10px;
+    border: none;
+    background-color: #2846B4;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.boton:hover{
+    background-color: #3C78C8;
+}
+
+.formulario li{
+    margin-left: 0.8em;
+}
+
+/*FOOTER*/
+
+footer{
+    border-top: 2px solid #2846B4;
+    clear: both;
+}
+
+footer article{
+    width: 49%;
+    overflow: hidden;
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+footer .izquierda{
+    float: left;
+    border-right: 2px solid #2846B4;
+}
+
+footer .derecha{
+    float: right;
+}
+
+iframe{
+    width: 90%;
+    height: 380px;
+    margin-top: 1em;
+}
+
+.izquierda .formulario{
+    width: 90%;
+    left:5%;
+}
+
+#area_texto{
+    height: 10em;
+    resize: none;
+    font-family: Asap, sans-serif;
+}
+
+footer h2{
+    margin: 0.5em 0;
+}
+
+.hide{
+    display: none;
+}
+
+.msg{
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.mensaje_ok{
+    background: #589D05;
+}
+
+.mensaje_error{
+    background: red;
+}
+
+@media screen and (min-width: 479px) and (max-width: 780px){
+    
+    h2{
+        padding-top: 0.2em;
+    }
+    
+    .formulario{
+        width: 80%;
+        left: 10%;
+    }
+    
+    header .infoMiviajante{
+        width: 70%;
+        clear: left;
+    }
+    
+    header .infoEmpresa{
+        width: 70%;
+        clear: left;
+    }
+    
+    header .infoCliente ul{
+        clear: left;
+    }
+    
+    header .cabecera{
+        position: relative;
+    }
+    
+    header .infoCliente{
+        position: absolute;
+        top: 0.4em;
+        right: 0;
+    }
+    
+    #galeria{
+        width: 80%;
+    }
+    
+    footer article{
+        width: 100%;
+        clear: left;
+    }
+    
+    footer .izquierda{
+        border-right: none;
+        border-bottom: 2px solid #2846B4;
+    }
+}
+
+@media screen and (max-width: 480px){
+    
+    h2{
+        padding-top: 0;
+    }
+    
+    .formulario{
+        width: 100%;
+        left: 0;
+    }
+    
+    header .infoMiviajante{
+        width: 100%;
+        clear: left;
+    }
+    
+    header .infoEmpresa{
+        width: 100%;
+        clear: left;
+    }
+    
+    header .infoCliente{
+        width: 100%;
+        clear: left;
+    }
+    
+    nav li{
+        float: none;
+        clear: left;
+    }
+    
+    nav a{
+        width: 100%;
+    }
+    
+    nav ul{
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    #galeria{
+        width: 100%;
+    }
+    
+        footer article{
+        width: 100%;
+        clear: left;
+    }
+    
+    footer .izquierda{
+        border-right: none;
+        border-bottom: 2px solid #2846B4;
+    }
+    
+}
