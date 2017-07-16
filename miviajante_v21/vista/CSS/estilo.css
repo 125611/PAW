@@ -397,6 +397,20 @@ input[type=number] {
     margin-left: 0.8em;
 }
 
+.enlaceGoogle{
+    color: #FFFFFF;
+    background-color: #FF4444;
+    font-size: 12px;
+    padding: 0.5em;
+}
+
+.enlaceGoogle:hover{
+    color: #FFFFFF;
+    background-color: #FF8888;
+    font-size: 12px;
+    padding: 0.5em;
+}
+
 /*FOOTER*/
 
 footer{
