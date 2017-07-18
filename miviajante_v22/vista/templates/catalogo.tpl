@@ -28,16 +28,17 @@
     <ul>
         
   {foreach item=item from=$listaProductos}
-        <li class='item_listado' data-idProducto='{$item->getCodigo_producto()}'>
+        <li class='item_listado' >
            <section class="imagen">
                <img src='{$path_base}vista/imagenes/{$item->getRutaImagen()}'>
            </section>
            <section class="descripcion">
                 <h1>{$item->getTitulo()}</h1>
                 <p>{$item->getDescripcion()}</p>
-           </section>
-            <section class="precio">
                 <h3>${$item->getPrecio_unitario()}</h3>
+           </section>
+            <section class="botones" data-idProducto='{$item->getCodigo_producto()}'>
+                <p>Cantidad de unidades en mi Carrito:</p>
             </section>
         </li>
   {/foreach}

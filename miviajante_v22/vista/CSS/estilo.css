@@ -120,7 +120,7 @@ nav ul {
 
 nav li {
     float:left;
-    margin-right: 2em;
+    margin-right: 1.5em;
 }
 
 nav a {
@@ -218,7 +218,7 @@ aside a:hover{
 }
 
 .listado{
-    width: 70%;
+    width: 75%;
     display: inline-block;
     margin-top: 1em;
 }
@@ -229,37 +229,29 @@ aside a:hover{
     padding: 0.3em;
     border-radius: 10px 10px;
     overflow: hidden;
-    min-height: 150px;
+    height: 200px;
     text-align: left;
 }
 
 .item_listado .imagen{
     width: 25%;
     float: left;
-    display: inline-block;
-    padding-top: 1em;
     border-right: 1px solid #2846B4;
-    min-height: 150px;
-}
-
-.item_listado .descripcion{
-    width: 60%;
-    float: left;
-    display: inline-block;
-    padding-left: 2em;
+    height: 200px;
 }
 
 .item_listado img{
-    width: 150px;
+    width: 90%;
+    padding-top: 1em;
 }
 
-.item_listado .precio{
-    display: inline-block;
-    float: right;
-    width: 10%;
-    border-left: 1px solid #2846B4;
-    min-height: 150px;
-    padding-top: 1em;
+.item_listado .descripcion{
+    width: 70%;
+    float: left;
+    padding-left: 0.5em;
+    margin-left: 0.5em;
+    height: 120px;
+    border-bottom: 1px solid #2846B4;
 }
 
 .item_listado h1{
@@ -267,44 +259,97 @@ aside a:hover{
 }
 
 .item_listado h3{
-    margin-left: 1em;
-    margin-top: 1em;
+    margin-top: 0.5em;
+    float: right;
+    border-left: 3px solid #2846B4;
+    padding-left: 0.3em;
 }
 
 .item_listado p{
+    margin-top: 1em;
+    font-size: 16px;
+    margin-left: 1em;
+}
+
+.item_listado .botones{
+    height: 2em;
+    float: left;
     margin-top: 2em;
 }
 
+.item_listado .botones p{
+    font-size: 12px;
+    float: left;
+    padding: 0 1em;
+}
+
 .item_listado button{
-    margin: 0.3em;
+    font-size: 12px;
+    padding: 0 0.3em;
+    margin-right: 0.5em;
     width: 2em;
+    height: 1.9em;
     color: #FFFFFF;
-    background-color: #2846B4;
     font-weight: bold;
     border: none;
     cursor: pointer;
+    float: left;
 }
 
-.item_listado button:hover{
-    background-color: #3C78C8;
+.item_listado button:focus{
+    outline: none;
 }
 
-.item_listado .id_producto{
+.item_listado .menos{
+    background-color: #FF4444;
+}
+
+.item_listado .mas{
+    background-color: #44BB44;
+}
+
+.item_listado .menos:hover{
+    background-color: #FF8888;
+}
+
+.item_listado .mas:hover{
+    background-color: #44FF44;
+}
+
+.item_listado input{
+    font-size: 12px;
+    padding: 0.3em 0.3em;
+    width: 3em;
+    margin-right: 0.5em;
+    color: #000000;
+    border: 1px solid #2846B4;
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+}
+
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.item_listado input:focus{
+    outline: none;
+    background-color: #6CB8FC;
+}
+
+.id_producto{
     display: none;
-}
-
-.item_listado .panel-carrito{
-    display: inline-block;
-    float: right;
-    align-content: center;
-    vertical-align: middle;
-    border: 2px solid #2846B4;
 }
 
 /*LOGIN Y REGISTRO*/
 .mensaje{
     font-weight: bold;
     text-align: center;
+    margin-top: 1em;
 }
 
 .formulario{
@@ -377,6 +422,20 @@ aside a:hover{
     margin-left: 0.8em;
 }
 
+.enlaceGoogle{
+    color: #FFFFFF;
+    background-color: #FF4444;
+    font-size: 12px;
+    padding: 0.5em;
+}
+
+.enlaceGoogle:hover{
+    color: #FFFFFF;
+    background-color: #FF8888;
+    font-size: 12px;
+    padding: 0.5em;
+}
+
 /*FOOTER*/
 
 footer{
@@ -421,25 +480,7 @@ footer h2{
     margin: 0.5em 0;
 }
 
-.hide{
-    display: none;
-}
-
-.msg{
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.mensaje_ok{
-    background: #589D05;
-}
-
-.mensaje_error{
-    background: red;
-}
-
-@media screen and (min-width: 479px) and (max-width: 780px){
+@media screen and (min-width: 481px) and (max-width: 780px){
     
     h2{
         padding-top: 0.2em;
@@ -472,6 +513,11 @@ footer h2{
         position: absolute;
         top: 0.4em;
         right: 0;
+        font-size: 14px;
+    }
+    
+    .enlaceChico{
+        font-size: 10px;
     }
     
     #galeria{
@@ -486,6 +532,39 @@ footer h2{
     footer .izquierda{
         border-right: none;
         border-bottom: 2px solid #2846B4;
+    }
+    
+    aside{
+        width: 100%;
+        clear: right;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .listado{
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+    }
+    
+    .item_listado p{
+        font-size: 14px;
+    }
+    
+    .item_listado .botones p{
+        padding: 0 0.5em;
+    }
+    
+    .item_listado button{
+        width: 1.3em;
+        height: 1.3em;
+        margin-top: 0.5em;
+    }
+    
+    .item_listado input{
+        padding: 0 0.1em;
+        margin-top: 0.5em;
+        width: 2em;
     }
 }
 
@@ -513,6 +592,11 @@ footer h2{
     header .infoCliente{
         width: 100%;
         clear: left;
+        font-size: 12px;
+    }
+    
+    .enlaceChico{
+        font-size: 10px;
     }
     
     nav li{
@@ -544,4 +628,61 @@ footer h2{
         border-bottom: 2px solid #2846B4;
     }
     
+    aside{
+        width: 100%;
+        clear: right;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .listado{
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+    }
+    
+    .item_listado{
+        height: auto;
+    }
+    
+    .item_listado .imagen{
+        width: 95%;
+        border-right: none;
+        height: auto;
+        border-bottom: 1px solid #2846B4;
+        margin-left: 0.5em;
+    }
+    
+    .item_listado img{
+        width: 75%;
+    }
+    
+    .item_listado .descripcion{
+        font-size: 12px;
+        width: 95%;
+        clear: left;
+        height: auto;
+        padding: 1em 0;
+    }
+    
+    .item_listado p{
+        font-size: 14px;
+    }
+    
+    .item_listado .botones p{
+        padding: 0 0.5em;
+        font-size: 10px;
+    }
+    
+    .item_listado button{
+        width: 1.3em;
+        height: 1.3em;
+        margin-top: 0.5em;
+    }
+    
+    .item_listado input{
+        padding: 0 0.1em;
+        margin-top: 0.5em;
+        width: 2em;
+    }
 }

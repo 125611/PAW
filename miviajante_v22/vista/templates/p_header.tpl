@@ -29,9 +29,9 @@
      {/if}>
     <ul>
         <li><a href="{$path_base}index.php">Inicio</a></li>
-        <li><a href="{$path_base}index.php/PedidoNuevo/nuevo">Nuevo Pedido</a></li>
         <li><a href="{$path_base}index.php/Productos/verCatalogo">Ver Catalogo</a></li>
-        <li><a href="{$path_base}index.php/Pedidos/listar">Mis Pedidos</a></li>				
+        <li><a href="{$path_base}index.php/Pedidos/listar">Mis Pedidos</a></li>
+        <li><a href="{$path_base}index.php/PedidoNuevo/nuevo">Comprar</a></li>				
     </ul>
 </nav>
     
