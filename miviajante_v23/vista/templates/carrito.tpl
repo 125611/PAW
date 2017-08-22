@@ -28,6 +28,8 @@
             <p>${$totalCompra}</p>
         </li>
     </ul>
+    <button id='btnCarrito_cancelar' class='botonCarrito'>Cancelar Pedido</button>
+    <button id='btnCarrito_comprar' class='botonCarrito'>Comprar</button>
 </article>  
 </section>
 {/block}

@@ -29,7 +29,7 @@ function colocarBotonesProductos(){
         items[i].appendChild(B);
         
         //ASYNC
-        getConAjax_POST_HTML($baseUrl+'index.php/Pedidos/getDetalleNuevoPedido?idProducto='+IDP,B,0);       
+        getConAjax_POST_HTML($baseUrl+'index.php/Carrito/getDetalleNuevoPedido?idProducto='+IDP,B,0);       
         
         //BOTON MAS
         B=document.createElement('button');
@@ -68,7 +68,7 @@ function modifContador(IDP,cantidad){
         alert("No se puede establecer un valor negativo para la cantidad!");
     }
     
-   var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Pedidos/setDetalleNuevoPedido?idProducto='+IDP+'&cantidad='+numConta);
+   var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Carrito/setDetalleNuevoPedido?idProducto='+IDP+'&cantidad='+numConta);
     console.log("rta"+rtaAjax);
 }
 

@@ -5,6 +5,7 @@ require_once('controlador/LoginGoogle.php');
 require_once('controlador/Registro.php');
 require_once('controlador/Productos.php');
 require_once('controlador/Pedidos.php');
+require_once('controlador/Carrito.php');
 require_once('controlador/Menu.php');
 require_once('config.php');
 require_once('controlador/AdministradorModelo.php');

@@ -1,32 +1,15 @@
 window.onload=function(){    //document.getElementsByTagName('body').innerHTML='aaa';
-colocarBotonesCarrito();
-}
-
-function colocarBotonesCarrito(){
-    
-    var items=document.getElementsByClassName('listadoCarrito');
     var B; 
-    //BOTON cancelar
-    B=document.createElement('button');
-    B.setAttribute('class','botonCarrito');
-    B.innerHTML='Cancelar Pedido';
-    B.onclick=cancelarPedido;
-    items[0].appendChild(B);
-    
-    //BOTON COMPRAR
-    B=document.createElement('button');
-    B.setAttribute('class','botonCarrito');
-    B.innerHTML='Comprar';
-    B.onclick=generarPedido;
-    items[0].appendChild(B);
+    B=document.getElementById('btnCarrito_cancelar').onclick=cancelarPedido;
+    B=document.getElementById('btnCarrito_comprar').onclick=generarPedido;
 }
 
 function cancelarPedido(){
-   var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Pedidos/clearDetallePedido');
+   var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Carrito/clearDetallePedido');
 }
 
 function generarPedido(){
-   var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Pedidos/generarPedido');
+   var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Carrito/generarPedido');
 }
 
 function getConAjax_POST_HTML(myUrl,destino,defaultValue){

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-08-22 12:58:06
+/* Smarty version 3.1.30, created on 2017-08-22 13:35:18
   from "C:\Develop\AppServ\www\PAW\miviajante_v23\vista\templates\p_header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_599c548e0c2244_81256353',
+  'unifunc' => 'content_599c5d46db4986_65499927',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cb65cf2e34d902cda09ddf89f32a37c6836cac94' => 
     array (
       0 => 'C:\\Develop\\AppServ\\www\\PAW\\miviajante_v23\\vista\\templates\\p_header.tpl',
-      1 => 1503151276,
+      1 => 1503419715,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_599c548e0c2244_81256353 (Smarty_Internal_Template $_smarty_tpl) {
+function content_599c5d46db4986_65499927 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <header>
 <section class='cabecera'>
@@ -66,7 +66,7 @@ index.php/Productos/verCatalogo">Ver Catalogo</a></li>
         <li><a href="<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
 index.php/Pedidos/listar">Mis Pedidos</a></li>
         <li><a href="<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
-index.php/Pedidos/nuevo">Comprar</a></li>				
+index.php/Carrito/nuevaCompra">Comprar</a></li>				
     </ul>
 </nav>
     
