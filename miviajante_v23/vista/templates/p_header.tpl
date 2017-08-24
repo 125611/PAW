@@ -31,8 +31,7 @@
         <li><a href="{$path_base}index.php">Inicio</a></li>
         <li><a href="{$path_base}index.php/Productos/verCatalogo">Ver Catalogo</a></li>
         <li><a href="{$path_base}index.php/Pedidos/listar">Mis Pedidos</a></li>
-        <li><a href="{$path_base}index.php/Carrito/nuevaCompra">Comprar</a></li>				
+        <li><a href="{$path_base}index.php/Carrito/nuevaCompra">Comprar</a></li>			<li><a href="{$path_base}index.php/Menu/contacto">Contactanos</a></li>	
     </ul>
-</nav>
-    
+</nav>    
 </header>

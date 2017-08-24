@@ -13,5 +13,10 @@ class Menu extends Controlador{
         //$this->ponerDatosDeUsuarioEnVista();
         $this->setVariableVista('mostrar', 'home'); 
     }
+    
+    public function contacto($REQ){
+        //$this->ponerDatosDeUsuarioEnVista();
+        $this->setVariableVista('mostrar', 'contacto'); 
+    }
 }
 ?>

@@ -27,6 +27,27 @@ class GetBD{
         return $sql;
     }
     
+    public function get_pedidos_por_nro($nroPedido){
+        
+        $sql = "SELECT * FROM  `Pedido` WHERE nro='$nroPedido'" ;
+        
+        return $sql;
+    }
+    
+    public function get_descripcion_de_pedido($nroPedido){
+        
+        $sql = "SELECT * FROM  `Descripcion` WHERE nro_pedido='$nroPedido'" ;
+        
+        return $sql;
+    }
+    
+    public function get_ultimoPedido(){
+        
+        $sql = "SELECT * FROM `pedido` WHERE 1 ORDER BY nro DESC LIMIT 1" ;
+        
+        return $sql;
+    }
+    
     public function get_clienteAndPassword($user,$pass){
        
      

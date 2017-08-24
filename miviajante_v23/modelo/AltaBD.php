@@ -42,12 +42,16 @@ public function insert_Cliente(Cliente $cliente){
   }
   
     
-    public function insert_Descripcion($numero_pedido,$codigo_producto,$cantidad,$precio){
-       
+    public function insert_Descripcion($miDesc){
+        $nP=$miDesc->getNro_pedido();
+        $cP=$miDesc->getCodigo_producto();
+        $cnt=$miDesc->getCantidad();
+        $pr=$miDesc->getPrecio();
+        
         $sql = "INSERT INTO `Descripcion`"
         . "(`nro_pedido`, `codigo_producto`, `cantidad`, `precio`)"
-        . " VALUES ($numero_pedido, $codigo_producto, $cantidad, $precio)";
-         
+        . " VALUES ($nP, $cP, $cnt, $pr)";
+        
         return $sql;
         
     }
@@ -56,15 +60,14 @@ public function insert_Cliente(Cliente $cliente){
      public function insert_Pedido(Pedido $pedido){
          
          $id_cliente = $pedido->getId_cliente();
-         $fecha_inicio = $pedido->getFecha_de_inicio();
-         $fecha_entrega = $pedido->getFecha_de_entrega();
+         $fecha_inicio = "'".$pedido->getFecha_de_inicio()."'";
+         $fecha_entrega = "'".$pedido->getFecha_de_entrega()."'";
          $estado_pedido = $pedido->getEstado_pedido();
          $precio_total = $pedido->getPrecio_total();
          
         $sql = "INSERT INTO `Pedido`"
-                . "(`nro`, `id_cliente`, `fecha_de_inicio`, `fecha_de_entrega`, `estado_pedido`, `precio_total`)"
-                . " VALUES ('',$id_cliente,$fecha_inicio,$fecha_entrega,$estado_pedido,$precio_total)";
-        
+                . "(`id_cliente`, `fecha_de_inicio`, `fecha_de_entrega`, `estado_pedido`, `precio_total`)"
+                . " VALUES ($id_cliente,$fecha_inicio,$fecha_entrega,$estado_pedido,$precio_total)";
          return $sql;
         
     }

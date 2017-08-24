@@ -22,7 +22,7 @@ class AdministradorModelo{
         return $adminBD->$accion();
 
                  
-        
+        //listar, productos, 
         
     }
     

@@ -1,7 +1,11 @@
-window.onload=function(){    //document.getElementsByTagName('body').innerHTML='aaa';
+window.onload = function ( ) {    //document.getElementsByTagName('body').innerHTML='aaa';
     var B; 
-    B=document.getElementById('btnCarrito_cancelar').onclick=cancelarPedido;
-    B=document.getElementById('btnCarrito_comprar').onclick=generarPedido;
+    B=document.getElementById('btnCarrito_cancelar');
+    B.classList.add('botonCarrito');
+    B.onclick=cancelarPedido;
+    B=document.getElementById('btnCarrito_comprar');
+    B.classList.add('botonCarrito');
+    B.onclick=generarPedido;
 }
 
 function cancelarPedido(){

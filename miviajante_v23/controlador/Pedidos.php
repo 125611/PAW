@@ -27,13 +27,37 @@ class Pedidos extends Controlador{
             $this->setVariableVista('alerta', 'No tienes ningún pedido');
             $this->setVariableVista('mensaje', '');
             $this->setVariableVista('mostrar', 'pedido');
-        }else{  
-        $this->setVariableVista('alerta', '');
-        $this->setVariableVista('mensaje', '');
-        $this->setVariableVista('listaPedidos', $rta);
-        $this->setVariableVista('mostrar', 'pedido');
+        }else{ 
+            
+            $this->setVariableVista('alerta', '');
+            $this->setVariableVista('mensaje', '');
+            $this->setVariableVista('listaPedidos', $rta);
+            if(isset($REQ['idp'])){
+                
+                $this->setVariableVista('listaDescripciones', $this->listarDetallesDeProducto($REQ['idp']));
+                $this->setVariableVista('productoSeleccionado', $REQ['idp']);
+            }
+            
+            $this->setVariableVista('mostrar', 'pedido');
         }
        // $this->setVariableVista('listaPedidos', $rta); 
     }
+    
+    private function listarDetallesDeProducto($idp){
+        $tarea = new AdministradorModelo();
+        $rta=$tarea->accion('especial', 'descripcionesPedido',$idp);
+        $lista=array();
+        foreach($rta as $miDesc){
+            $miLinea='';
+            $miLinea.=$tarea->accion('especial', 'tituloDeProducto',$miDesc->getCodigo_producto());
+            $miLinea.=' x'.$miDesc->getCantidad();
+            $miLinea.='  ---- $'.($miDesc->getCantidad()*$miDesc->getPrecio());
+            
+            $lista[]=$miLinea;
+            
+        }
+        return $lista;
+    }
+    
 }
 ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-08-22 13:50:13
+/* Smarty version 3.1.30, created on 2017-08-22 21:35:56
   from "C:\Develop\AppServ\www\PAW\miviajante_v23\vista\templates\carrito.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_599c60c5603d80_62476895',
+  'unifunc' => 'content_599ccdec56b801_79986862',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e909e6c7a730086d5f4db2423062365c6396d9a2' => 
     array (
       0 => 'C:\\Develop\\AppServ\\www\\PAW\\miviajante_v23\\vista\\templates\\carrito.tpl',
-      1 => 1503420519,
+      1 => 1503448538,
       2 => 'file',
     ),
   ),
@@ -21,19 +21,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:p_layout.tpl' => 1,
   ),
 ),false)) {
-function content_599c60c5603d80_62476895 (Smarty_Internal_Template $_smarty_tpl) {
+function content_599ccdec56b801_79986862 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21885599c60c5603d85_01346518', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1596599ccdec567988_78914620', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:p_layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_21885599c60c5603d85_01346518 extends Smarty_Internal_Block
+class Block_1596599ccdec567988_78914620 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -79,8 +79,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 </p>
         </li>
     </ul>
-    <button id='btnCarrito_cancelar' class='botonCarrito'>Cancelar Pedido</button>
-    <button id='btnCarrito_comprar' class='botonCarrito'>Comprar</button>
+    <button id='btnCarrito_cancelar' >Cancelar Pedido</button>
+    <button id='btnCarrito_comprar' >Comprar</button>
 </article>  
 </section>
 <?php

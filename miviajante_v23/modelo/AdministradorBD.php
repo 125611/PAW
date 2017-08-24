@@ -5,6 +5,7 @@ require_once 'configs/Query.php';
 
 require_once 'modelo/Producto.php';
 require_once 'modelo/Pedido.php';
+require_once 'modelo/Descripcion.php';
 
 require_once 'AltaBD.php';
 require_once 'BajaBD.php';
@@ -107,6 +108,59 @@ class AdministradorBD{
             return $items;
  
        }
+    
+    public function especial(){
+       switch ($this->tabla) {
+           case "ultimoPedido":
+               $sql = $this->getBD->get_ultimoPedido($this->objeto);           $rta = $this->query($sql);                           
+               foreach ($rta as $row) {
+                   $pedido = new Pedido();
+                   $pedido->setNro($row['nro']);
+                   $pedido->setId_cliente($row['id_cliente']);
+                   $pedido->setFecha_de_inicio($row['fecha_de_inicio']);
+                   $pedido->setFecha_de_entrega($row['fecha_de_entrega']);
+                   $pedido->setEstado_pedido($row['estado_pedido']);
+                   $pedido->setPrecio_total($row['precio_total']);return $pedido;
+                }
+                break;
+               
+            case "pedidoNro":
+               $sql = $this->getBD->get_pedidos_por_nro($this->objeto);       $rta = $this->query($sql);                           
+               foreach ($rta as $row) {
+                   $pedido = new Pedido();
+                   $pedido->setNro($row['nro']);
+                   $pedido->setId_cliente($row['id_cliente']);
+                   $pedido->setFecha_de_inicio($row['fecha_de_inicio']);
+                   $pedido->setFecha_de_entrega($row['fecha_de_entrega']);
+                   $pedido->setEstado_pedido($row['estado_pedido']);
+                   $pedido->setPrecio_total($row['precio_total']);
+                   return $pedido;
+                }
+                break;
+               
+            case "descripcionesPedido":
+               $sql = $this->getBD->get_descripcion_de_pedido($this->objeto);       $rta = $this->query($sql);           $items=array();                
+               foreach ($rta as $row) {
+                   $descripcion = new Descripcion();
+                   $descripcion->setNro_pedido($row['nro_pedido']);
+                   $descripcion->setCodigo_producto($row['codigo_producto']);
+                   $descripcion->setCantidad($row['cantidad']);
+                   $descripcion->setPrecio($row['precio']);
+                   $items[]=$descripcion;
+                }
+                return $items;
+                break;
+               
+               case "tituloDeProducto":
+               $sql = $this->getBD->get_productos_por_id($this->objeto);       $rta = $this->query($sql);                           
+               foreach ($rta as $row) {
+                   return $row['titulo'];
+                }
+                break;
+            
+        }
+        return null;
+   }
     
     
     public function get(){   
@@ -253,14 +307,35 @@ class AdministradorBD{
                          } catch (Exception $exc) {
                             //error
                          }
-
-
-
                          break;
-                 
-                 
-         
-                            }
+                     
+                     case "pedido":
+                     
+                         $sql = $this->altaBD->insert_Pedido($this->objeto);
+                                                      
+                         try {         
+                            $rta = $this->query($sql);
+                            $b = true;
+                         } catch (Exception $exc) {
+                             echo $exc->getTraceAsString();                         
+                         }
+    
+    
+                         break;
+                     
+                     case "descripcion":
+                     
+                          $sql = $this->altaBD->insert_Descripcion($this->objeto);
+                          
+                          try {   
+                            $rta = $this->query($sql);
+                            $b = true;
+                          } catch (Exception $exc) {
+                              echo $exc->getTraceAsString();                         
+                          }        
+        
+                          break;
+              }
        
        return $b ; 
      }
@@ -275,11 +350,5 @@ class AdministradorBD{
         return $respuesta ;
         
     } 
-    
-    
-    
-    
-    
-    
     
 }

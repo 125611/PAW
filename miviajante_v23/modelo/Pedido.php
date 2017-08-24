@@ -8,7 +8,7 @@ class Pedido{
             $fecha_de_entrega,
             $estado_pedido,
             $precio_total,
-            $descripciones;
+            $descripcion;
     
     public function __construct() {
     } 
@@ -37,7 +37,7 @@ class Pedido{
         return $this->precio_total;
     }
     
-    function getDescripciones(){
+    function getDescripcion(){
         return $this->descripciones;
     }
 
@@ -65,7 +65,7 @@ class Pedido{
         $this->precio_total = $precio_total;
     }
 
-    function setDescripciones($descripciones){
+    function setDescripcion($descripciones){
         $this->descripciones = $descripciones;
     }
     

@@ -328,6 +328,49 @@ aside a:hover{
     float: left;
 }
 
+/*LISTADO CON DETALLE DEL PEDIDO*/
+.item_listado_detalle{
+    margin-bottom: 2em;
+    border: 2px solid #2846B4;
+    padding: 0.3em;
+    border-radius: 10px 10px;
+    overflow: hidden;
+    text-align: left;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.item_listado_detalle h1{
+    font-size: 18px;
+}
+
+.item_listado_detalle h3{
+    margin-top: 5px;
+    float: right;
+    border-left: 3px solid #2846B4;
+    padding-left: 0.3em;
+}
+
+.item_listado_detalle p{
+    margin-top: 3px;
+    font-size: 16px;
+    margin-left: 1em;
+    display: inline-block;
+}
+
+.item_listado_detalle .listaDeDetalles{
+    margin-top: 15px;
+    margin-left: 3em;
+    width: 80%;
+    display: block;
+    background-color: #FFEEDD;
+}
+
+.item_listado_detalle .listaDeDetalles li{
+    font-size: 13px;    
+    border-bottom: 1px solid #CCCCCC;
+}
+
 /*LISTADO DETALLE CARRITO*/
 .listadoCarrito{
     width: auto;
@@ -482,24 +525,24 @@ input[type=number] {
 
 /*FOOTER*/
 
-footer{
+.contactoBody{
     border-top: 2px solid #2846B4;
     clear: both;
 }
 
-footer article{
+.contactoBody article{
     width: 49%;
     overflow: hidden;
     margin: 0.5em 0;
     text-align: center;
 }
 
-footer .izquierda{
+.contactoBody .izquierda{
     float: left;
     border-right: 2px solid #2846B4;
 }
 
-footer .derecha{
+.contactoBody .derecha{
     float: right;
 }
 

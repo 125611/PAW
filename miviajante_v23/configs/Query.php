@@ -15,7 +15,7 @@ class query{
   
     public function prepareAndExecute(){
                 
-        
+           // echo $this->sql;
            $bd = $this->conexion->prepare($this->sql);
            
                     
