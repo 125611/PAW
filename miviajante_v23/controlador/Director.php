@@ -15,7 +15,8 @@ class Director{
     
     public function action($REQ, $PATH){ 
         //parseamos los parametros recibidos a clase/metodo
-        $PATH = split('/',$PATH);
+        //$PATH = split('/',$PATH);
+		$PATH=explode('/', $PATH);
         if($PATH[1]!='')$miClase=$PATH[1];
         if($PATH[2]!='')$miMetodo=$PATH[2];
         //echo 'recibo'. $miClase.'|'.$miMetodo;

@@ -1,0 +1,17 @@
+HOSTING PAW 2017
+http://eshost.com.ar
+
+NAME SERVERS PARA APUNTAR LOS DOMINIOS
+NS1.ESHOST.COM.AR
+NS2.ESHOST.COM.AR
+
+host: miviajante.eshost.com.ar
+pass: paw2017
+
+
+
+
+
+
+https://ar.000webhost.com/registro-sitio-gratis
+paw2017
