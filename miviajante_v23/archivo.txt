@@ -1,0 +1,2 @@
+INSERT INTO `Pedido`(`id_cliente`, `fecha_de_inicio`, `fecha_de_entrega`, `estado_pedido`, `precio_total`) VALUES (1,01/01/2000,01/01/2001,1,0)
+Otra más
