@@ -12,8 +12,9 @@ function cancelarPedido(){
    var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Carrito/clearDetallePedido');
 }
 
-function generarPedido(){
+function generarPedido(e){
    var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Carrito/generarPedido');
+   e.target.onclick=null;
 }
 
 function getConAjax_POST_HTML(myUrl,destino,defaultValue){

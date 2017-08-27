@@ -47,8 +47,7 @@
         private function getBaseUrl() {
             $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,5))=='https://'?'https://':'http://';
             $hostName = $_SERVER['HTTP_HOST'];
-            //$pathInfo = split('index.php',$_SERVER['PHP_SELF'])[0];
-			$pathInfo = explode('index.php',$_SERVER['PHP_SELF'])[0];
+            $pathInfo = split('index.php',$_SERVER['PHP_SELF'])[0];
             //  http:// + localhost + /PAW/miviajante/
             return $protocol.$hostName.$pathInfo;
         }
