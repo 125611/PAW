@@ -12,7 +12,7 @@ public function __construct() {
     
 } 
 
-function iniciarCarrito($usu, $b){     
+function iniciarCarrito($usu){     
      $tarea = new AdministradorModelo();
      $TODOS_LOS_PRODUCTOS = $tarea->accion('listar', 'productos', '');      
      //BUSCAMOS LAS COOKIES DE PRODUCTOS EN EL CARRITO
@@ -37,10 +37,8 @@ function iniciarCarrito($usu, $b){
              }
          }         
      }
-    if(empty($this->listaCarrito) && $b){
-        $this->mensaje = "FELICITACIONES";
-    }else if(empty($this->listaCarrito) && !$b){
-        $this->mensaje = "TU CARRITO ESTA VACIO!. Elija los productos que desea comprar en el catalogo.";
+    if(empty($this->listaCarrito)){
+        $this->mensaje = "TU CARRITO ESTA VACIO! Elija desde el catalogo los productos que desea comprar.";
     }else{
         $this->mensaje = "Detalle de su compra:";
     }

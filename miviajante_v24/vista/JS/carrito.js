@@ -9,12 +9,15 @@ window.onload = function ( ) {    //document.getElementsByTagName('body').innerH
 }
 
 function cancelarPedido(){
+    console.log("ok0");
     var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Carrito/clearDetallePedido');
+    alert("TU CARRITO ESTA VACIO! Elija desde el catalogo los productos que desea comprar.");
 }
 
 function generarPedido(e){
     var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Carrito/generarPedido');
     e.target.onclick=null;
+    alert("FELICITACIONES! Tu pedido ha sido registrado.");
 }
 
 function getConAjax_POST_HTML(myUrl,destino,defaultValue){
@@ -28,8 +31,9 @@ function getConAjax_POST_HTML(myUrl,destino,defaultValue){
      .done(function( data, textStatus, jqXHR ) {
          if ( console && console.log ) {
              //console.log( "La solicitud se ha completado correctamente."+data );
-             location.reload();
+             location.href=$baseUrl+'index.php/Productos/verCatalogo';
          }
+
         /*if(destino!=undefined){
             //if (data=='')destino.innerHTML=defaultValue;
             if (data=='')destino.setAttribute('value',defaultValue);

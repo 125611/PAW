@@ -41,10 +41,11 @@ class Carrito extends Controlador{
         }
     }
     
-    public function generarPedido($REQ){         
+    public function generarPedido($REQ){  
+
         $miPedido=new Pedido();
         $miCarrito=new CarritoDeCompra();
-        $miCarrito->iniciarCarrito($_SESSION['id'],True);
+        $miCarrito->iniciarCarrito($_SESSION['id']);
         
         $miPedido->setId_cliente($_SESSION['id']);
         
@@ -59,7 +60,7 @@ class Carrito extends Controlador{
         $tarea->accion('registrar', 'pedido', $miPedido);        
         $miPedido = $tarea->accion('especial', 'ultimoPedido', '');
         $nroPedido=$miPedido->getNro();
-        
+
         //CREAMOS UNA DESCRIPCION CON EL NRO del PEDIDO        
         $miDescripcion=new Descripcion();
         $miDescripcion->setNro_pedido($nroPedido);
@@ -77,17 +78,19 @@ class Carrito extends Controlador{
             $miDescripcion->setPrecio($miP->getPrecio_unitario());
             $tarea->accion('registrar', 'descripcion', $miDescripcion);  
         }        
-        
+
         //if ($rta){throw new Exception('rta BBDD: '.$rta);}
        // setcookie('debugMSJ', 'nroPedido: '.$miPedido->getNro(), time() + 99999, "/");
         
         //BORRAMOS EL DETALLE
         $this->clearDetallePedido($REQ);
+          
+
     }
     
     public function nuevaCompra($REQ){
         $miCarrito=new CarritoDeCompra();
-        $miCarrito->iniciarCarrito($_SESSION['id'],False);
+        $miCarrito->iniciarCarrito($_SESSION['id']);
         
         $this->setVariableVista('mensaje', $miCarrito->getMensaje());
         $this->setVariableVista('listaCarrito', $miCarrito->getListaCarrito());
