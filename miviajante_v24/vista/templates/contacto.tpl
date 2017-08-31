@@ -6,7 +6,7 @@
         {/if}>
     <article class="izquierda">
      <h2><span>Contactanos:</span></h2>
-      <form class="formulario" action="#" method="post">
+      <form class="formulario" action="{$path_base}consulta.php" method="post">
                 <ul>                                    
                     <li>
                         <label for="nombre">Ingrese su Nombre: (*)</label>

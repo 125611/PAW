@@ -9,7 +9,6 @@ window.onload = function ( ) {    //document.getElementsByTagName('body').innerH
 }
 
 function cancelarPedido(){
-    console.log("ok0");
     var rtaAjax=getConAjax_POST_HTML($baseUrl+'index.php/Carrito/clearDetallePedido');
     alert("TU CARRITO ESTA VACIO! Elija desde el catalogo los productos que desea comprar.");
 }

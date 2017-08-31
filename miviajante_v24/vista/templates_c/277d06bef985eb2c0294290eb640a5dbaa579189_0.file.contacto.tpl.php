@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-08-31 15:28:18
+/* Smarty version 3.1.30, created on 2017-08-31 18:54:17
   from "C:\xampp\htdocs\PAW\miviajante_v24\vista\templates\contacto.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59a85542aeee80_12211469',
+  'unifunc' => 'content_59a88589d23ce3_91725012',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '277d06bef985eb2c0294290eb640a5dbaa579189' => 
     array (
       0 => 'C:\\xampp\\htdocs\\PAW\\miviajante_v24\\vista\\templates\\contacto.tpl',
-      1 => 1503886834,
+      1 => 1504216447,
       2 => 'file',
     ),
   ),
@@ -21,19 +21,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:p_layout.tpl' => 1,
   ),
 ),false)) {
-function content_59a85542aeee80_12211469 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59a88589d23ce3_91725012 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1925659a85542aebf82_26934897', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3032759a88589d20cd9_19430814', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:p_layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_1925659a85542aebf82_26934897 extends Smarty_Internal_Block
+class Block_3032759a88589d20cd9_19430814 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -43,7 +43,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <?php }?>>
     <article class="izquierda">
      <h2><span>Contactanos:</span></h2>
-      <form class="formulario" action="#" method="post">
+      <form class="formulario" action="<?php echo $_smarty_tpl->tpl_vars['path_base']->value;?>
+consulta.php" method="post">
                 <ul>                                    
                     <li>
                         <label for="nombre">Ingrese su Nombre: (*)</label>
